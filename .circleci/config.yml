@@ -16,9 +16,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: ROS2Test
-          command: ros2
+          name: compile
+          command: gcc main.cpp
 
       - run:
-          name: Print the Current Time
-          command: date
+          name: run it
+          command: main
