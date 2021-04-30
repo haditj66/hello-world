@@ -17,16 +17,24 @@ executors:
        image: ubuntu-2004:202010-01
 
 
+commands:
+  setupmachine:
+    steps: 
+        - run: sudo apt update 
+        - run: sudo apt install build-essential
+
+
 jobs:
   MyTestBuildStep:
     executor: vmmachine
     steps:
       - checkout
-      - run:
-          name: setupMachine 
-          command: sudo apt update
-      - run:
-          command: sudo apt install build-essential
+      - setupmachine
+      #- run:
+        #  name: setupMachine 
+       #   command: sudo apt update
+      #- run:
+          #command: sudo apt install build-essential
       - run:
           name: compile
           command: g++ -o main main.cpp
