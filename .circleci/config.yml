@@ -23,6 +23,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: setupMachine 
+          command: sudo apt update
+      - run:
+          command: sudo apt install build-essential
+      - run:
           name: compile
           command: gcc main.cpp
 
