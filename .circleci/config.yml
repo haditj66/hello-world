@@ -29,7 +29,7 @@ jobs:
     executor: vmmachine
     steps:
       - checkout
-      - setupmachine
+      #- setupmachine
       #- run:
         #  name: setupMachine 
        #   command: sudo apt update
