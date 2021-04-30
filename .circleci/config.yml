@@ -29,8 +29,8 @@ jobs:
           command: sudo apt install build-essential
       - run:
           name: compile
-          command: gcc main.cpp
+          command: g++ -o main main.cpp
 
       - run:
           name: run it
-          command: main
+          command: ./main
