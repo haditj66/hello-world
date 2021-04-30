@@ -19,7 +19,7 @@ executors:
 
 jobs:
   MyTestBuildStep:
-    executor: dockerexectest
+    executor: vmmachine
     steps:
       - checkout
       - run:
